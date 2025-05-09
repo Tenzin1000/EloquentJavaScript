@@ -1,13 +1,81 @@
 <!DOCTYPE html>
 <script src="code/journal.js"></script>
 <script src="code/chapter/04_data.js"></script>
-
+<style>
+  h1 {
+    color: green;
+  }
+  p {
+    color: red;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .myHome {
+    margin: 20px 0;
+    text-align: center;
+    background-color: aquamarine;
+    color: red;
+    padding: 20px;
+  }
+  .merge {
+    background-color: aquamarine;
+    border: 1px solid red;
+    text-align: center;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+    color: blue;
+  }
+  .center {
+    text-align: center;
+    margin: 10px;
+    background-color: yellow;
+    padding:10px
+  }
+</style>
 <body>
+  <h1>this is Eloquent JavaScript</h1>
+  <p class="myHome">This is my home</p>
+  <p>
+    This is commit from master branch, I am about to need this changes in both
+    master and bugFix branch
+  </p>
+
+  <h3>Master branch is the hero of all branch</h3>
+  <div>
+    <p>=======================================================</p>
+    <h1>hello World this is from bugFix branch</h1>
+    <p>=======================================================</p>
+  </div>
+  <h3>this is from bugFix branch and checking merge history</h3>
+  <p class="merge">
+    This is about to be merge section for bugFix branch. <br />
+    <br />
+    Home place where I can go, Someone take me home, once I shared my wrath, it
+    decreased , <br />
+    once I never did, my wrath did grow, <br />
+    Like a growing seeds of from fallen tree, <br />
+    It growed and become big tree, <br />
+    before I could ever control it.
+  </p>
+  <p class="center">add this from sangey branch</p>
+  <p class="center">this is from second change in sangey branch</p>
+  <p class="center">this is from second change in sangey branch</p>
+  <p class="center">this is from second change in sangey branch</p>
+  <p class="center">this is from second change in sangey branch</p>
+  <p class="center">this is from second change in sangey branch</p>
+  <script src="./karma/karma.js"></script>
   <script>
+    let myHome = document.querySelector(".myHome");
+    let heading = document.createElement("h1");
+    let headingText = document.createTextNode(karma);
+    heading.appendChild(headingText);
+    myHome.appendChild(heading);
     for (let event of journalEvents(JOURNAL)) {
       let correlation = phi(tableFor(event, JOURNAL));
       if (correlation > 0.1 || correlation < -0.1) {
-        console.log(event + ":", correlation);
       }
     }
     // → brushed teeth: -0.3805211953
