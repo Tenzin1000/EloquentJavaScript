@@ -41,22 +41,3 @@ function journalEvents(journal) {
   return events;
 }
 
-// function max(...numbers) {
-//   console.log(...numbers);
-//   let result = -Infinity;
-//   for (let number of numbers) {
-//     if (number > result) result = number;
-//   }
-//   return result;
-// }
-
-// var list = {
-//   value: 1,
-//   rest: {
-//     value: 2,
-//     rest: {
-//       value: 3,
-//       rest: null,
-//     },
-//   },
-// };
