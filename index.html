@@ -8,10 +8,22 @@
   p {
     color: red;
   }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .myHome {
+    margin: 20px 0;
+    text-align: center;
+    background-color: aquamarine;
+    color:red;
+    padding: 20px;
+  }
 </style>
 <body>
   <h1>this is Eloquent JavaScript</h1>
-
+  <p class="myHome">This is my home</p>
   <p>
     This is commit from master branch, I am about to need this changes in both
     master and bugFix branch
@@ -23,11 +35,16 @@
     <h1>hello World this is from bugFix branch</h1>
     <p>=======================================================</p>
   </div>
+  <script src="./karma/karma.js"></script>
   <script>
+    let myHome = document.querySelector(".myHome");
+    let heading = document.createElement("h1");
+    let headingText = document.createTextNode(karma);
+    heading.appendChild(headingText);
+    myHome.appendChild(heading);
     for (let event of journalEvents(JOURNAL)) {
       let correlation = phi(tableFor(event, JOURNAL));
       if (correlation > 0.1 || correlation < -0.1) {
-        console.log(event + ":", correlation);
       }
     }
     // → brushed teeth: -0.3805211953
