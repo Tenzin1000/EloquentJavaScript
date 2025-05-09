@@ -1,1 +1,1 @@
-const karma = "You are karma from Kathmandu";
+const karma = "Hello To everyOne";
